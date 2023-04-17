@@ -14,10 +14,10 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install ./model-archiver -vv
-  number: 0
+  noarch: python
+  number: 1
   entry_points:
     - model-archiver = model_archiver.model_packaging:generate_model_archive
-  skip: True  # [win or osx]
   
 requirements:
   host:
