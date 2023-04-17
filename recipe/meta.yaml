@@ -14,17 +14,17 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install ./model-archiver -vv
-  number: 2
+  noarch: python
+  number: 3
   entry_points:
     - model-archiver = model_archiver.model_packaging:generate_model_archive
-  skip: True  # [win or osx]
   
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - enum-compat
     - future
 
